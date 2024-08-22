@@ -1,0 +1,127 @@
+﻿<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu amigo cão - Petshop</title>
+    <link href="css/principal.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="banhotosa">
+    <header>
+        <h1>Meu amigo cão - Petshop</h1>
+        <div id="anuncio">
+            
+            <img src="imagens/anuncio-cantinho-feliz-h.jpg" alt="anúncio-cantinho feliz, hotel para cachorro">
+        </div>
+        <section>
+            <p><a href="boletim.html">Assine o boletim mensal</a></p>
+            <p>nos acompanhe:</p>
+            <figure>
+                <a href="#"><img src="imagens/ms-facebook.gif" alt="facebook"></a>
+                <a href="#"><img src="imagens/ms-twitter.gif" alt="twitter"></a>
+                <a href="#"><img src="imagens/ms-youtube.gif" alt="youtuber"></a>
+                <a href="#"><img src="imagens/ms-pinterest.gif" alt="pinterest"></a>
+                <a href="#"><img src="imagens/ms-gmais.gif" alt="google mais"></a>
+            </figure>
+        </section>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quemsomos.html">Quem somos</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="banhotosa.html">Banho e Tosa</a></li>
+            <li><a href="curiosidades.html">Curiosidades</a></li>
+        </ul>
+    </nav>
+    <h1>Agendamento para banho e tosa </h1>
+    <h2>Faça o seu agendamento com pelo menos 48 horas de antecedência</h2>
+
+    <form method="post" id="banho" action="cadbanho.php">
+
+        <fieldset id="idtutor">
+            <legend>Identificação do tutor</legend>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nometutor" id="nometutor" placeholder="Digite seu nome" size="45">
+            </p>
+            <p>
+                <label for="endereco">Endereço:</label>
+                <input type="text" name="endereco" id="endereco" placeholder="Digite o seu endereço" size="45">
+            </p>
+            <p>
+                <label for="cep">CEP:</label>
+                <input type="text" name="cep" id="cep" placeholder="XXXXX-XXX" size="9">
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Digiete seu endereço de e-mail" size="45">
+            </p>
+            <p>
+                <label for="cel">Celular:</label>
+                <input type="text" name="cel" id="cel" placeholder="(85)99999-9999" size="14">
+            </p>
+        </fieldset>
+        <fieldset id="idanimal">
+            <legend>Identificação do Pet</legend>
+            <p>
+                <label for="nomeanimal">Nome:</label>
+                <input type="text" name="nomeanimal" id="nomeanimal" placeholder="Digite o nome do pet" size="45">
+            </p>
+            <p>
+                Porte do Pet:
+                <input type="radio" name="porteanimal" id="porteanimal" value="pequeno" checked><label for="porteanimal">Pequeno</label>
+                <input type="radio" name="porteanimal" id="porteanimal" value="medio"><label for="porteanimal">Médio</label>
+                <input type="radio" name="porteanimal" id="porteanimal" value="grande"><label for="porteanimal">Grande</label>
+            </p>
+            <p>
+                Tipo de tosa:
+                <select name="tipotosa" id="tipotosa">
+                    <option value="nenhuma">Nenhuma</option>
+                    <option value="padrão">Padrão</option>
+                    <option value="higienica">Tosa higiênica</option>
+                    <option value="tesoura">Tosa na tesoura</option>
+                    <option value="raca">Tosa da raça</option>
+                    <option value="bebe">Tosa bebê</option>
+                </select>
+            </p>
+            <p>
+                Observações: <textarea name="obs" id="obs" cols="30" rows="10"
+                    placeholder="Digite as observações"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Marque o dia de sua preferência</legend>
+            <p>
+                Marque o dia de sua preferência
+                <input type="checkbox" name="dia3" id="dia3" value="terca"><label for="dia3">Terça-feira</label>
+                <input type="checkbox" name="dia4" id="dia4" value="quarta"><label for="dia4">Quarta-feira</label>
+                <input type="checkbox" name="dia5" id="dia5" value="quinta"><label for="dia5">Quinta-feira</label>
+                <input type="checkbox" name="dia6" id="dia6" value="sexta"><label for="dia6">Sexta-feira</label>
+                <input type="checkbox" name="dia7" id="dia7" value="sabado"><label for="dia7">Sábado</label>
+            </p>
+            <p>Coloque o primeiro horário: <input type="datetime-local" name="phorario" id="phorario" min="2023-01-02T08:00:00"
+                    max="2024-04-31T17:00:00"></p>
+            <p>Coloque o segundo horário: <input type="datetime-local" name="shorario" id="shorario"
+                    min="2023-01-02T08:00:00" max="2024-04-31T17:00:00"></p>
+            <p>hora de atendimento <input type="time" name="horaatend" id="horaatend" min="08:00:00" max="17:00:00"></p>
+        </fieldset>
+        <p>
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+
+    <footer>
+        <p>
+            E-mail: <a href="mailto:analysiamendes@gmail.com" target="_blank">petshopana@gmail.com</a>
+            | Telefone: <a href="tel:+558540003007" target="_blank">(85) 4000-0000</a>
+            | WhatApp: <a href="https://wa.me/5585996206338" target="_blank">(85) 99999-9999</a>
+        </p>
+    </footer>
+</body>
+
+</html>
